@@ -20,7 +20,7 @@ public class TechnologyService {
 
     public List<TechnologyResponseDTO> findAll() {
 
-        var allTechnologies = this.technologyRepository.findAll();
+        List<Technology> allTechnologies = this.technologyRepository.findAll();
 
         return allTechnologies.stream()
                 .map(technology -> new TechnologyResponseDTO(
