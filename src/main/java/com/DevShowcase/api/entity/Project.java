@@ -17,4 +17,7 @@ public class Project {
     @Column(name = "name", nullable = false, unique = true)
     private String name;
 
+    @ManyToOne
+    @JoinColumn(name = "profile_id", nullable = false)
+    private Profile profile;
 }

@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Setter
 @Getter
 @Entity
@@ -17,4 +20,6 @@ public class Profile {
     @Column(name = "name", nullable = false, unique = true)
     private String name;
 
+    @OneToMany(mappedBy = "profile")
+    private List<Project> projects = new ArrayList<>();
 }
