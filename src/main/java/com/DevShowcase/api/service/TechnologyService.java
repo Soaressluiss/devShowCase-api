@@ -25,8 +25,7 @@ public class TechnologyService {
         return allTechnologies.stream()
                 .map(technology -> new TechnologyResponseDTO(
                         technology.getId(),
-                        technology.getTechnology(),
-                        technology.getDescription()
+                        technology.getTechnology()
                 ))
                 .toList();
     }

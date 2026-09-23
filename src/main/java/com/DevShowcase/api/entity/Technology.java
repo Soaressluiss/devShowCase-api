@@ -17,8 +17,4 @@ public class Technology {
 
     @Column(name = "technology", unique = true, nullable = false)
     private String technology;
-
-    @Column(name = "description", unique = true, nullable = false)
-    private String description;
-
 }
